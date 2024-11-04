@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://q828pww18le7"]
+
+[node name="LevelSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -20.0
+offset_right = 163.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Level 1" type="Button" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "Level 1"
+
+[node name="Level 2" type="Button" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "Level 2"
+
+[node name="Level 3" type="Button" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "Level 3"
+
+[node name="Level 4" type="Button" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "Level 4"
+
+[node name="Level 5" type="Button" parent="GridContainer/HBoxContainer"]
+layout_mode = 2
+text = "Level 5"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Level 6" type="Button" parent="GridContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Level 6"
+
+[node name="Level 7" type="Button" parent="GridContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Level 7"
+
+[node name="Level 8" type="Button" parent="GridContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Level 8"
+
+[node name="Level 9" type="Button" parent="GridContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Level 9"
+
+[node name="Level 10" type="Button" parent="GridContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Level 10"

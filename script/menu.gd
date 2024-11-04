@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_campagne_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scene/level_selector.tscn")
 
 
 func _on_options_pressed() -> void:
