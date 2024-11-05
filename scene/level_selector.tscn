@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2bwt1")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="LevelContainer" type="GridContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,65 +25,80 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Level 1" type="Button" parent="GridContainer/HBoxContainer"]
+[node name="Level 1" type="Button" parent="LevelContainer/HBoxContainer"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../HBoxContainer2/Level 10")
 text = "Level 1"
 
-[node name="Level 2" type="Button" parent="GridContainer/HBoxContainer"]
+[node name="Level 2" type="Button" parent="LevelContainer/HBoxContainer"]
 layout_mode = 2
 text = "Level 2"
 
-[node name="Level 3" type="Button" parent="GridContainer/HBoxContainer"]
+[node name="Level 3" type="Button" parent="LevelContainer/HBoxContainer"]
 layout_mode = 2
 text = "Level 3"
 
-[node name="Level 4" type="Button" parent="GridContainer/HBoxContainer"]
+[node name="Level 4" type="Button" parent="LevelContainer/HBoxContainer"]
 layout_mode = 2
 text = "Level 4"
 
-[node name="Level 5" type="Button" parent="GridContainer/HBoxContainer"]
+[node name="Level 5" type="Button" parent="LevelContainer/HBoxContainer"]
 layout_mode = 2
 focus_neighbor_right = NodePath("../../HBoxContainer2/Level 6")
 text = "Level 5"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="LevelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Level 6" type="Button" parent="GridContainer/HBoxContainer2"]
+[node name="Level 6" type="Button" parent="LevelContainer/HBoxContainer2"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../../HBoxContainer/Level 5")
 focus_neighbor_top = NodePath("../../HBoxContainer/Level 1")
 text = "Level 6"
 
-[node name="Level 7" type="Button" parent="GridContainer/HBoxContainer2"]
+[node name="Level 7" type="Button" parent="LevelContainer/HBoxContainer2"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../Level 6")
 focus_neighbor_top = NodePath("../../HBoxContainer/Level 2")
 text = "Level 7"
 
-[node name="Level 8" type="Button" parent="GridContainer/HBoxContainer2"]
+[node name="Level 8" type="Button" parent="LevelContainer/HBoxContainer2"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../Level 7")
 focus_neighbor_top = NodePath("../../HBoxContainer/Level 3")
 text = "Level 8"
 
-[node name="Level 9" type="Button" parent="GridContainer/HBoxContainer2"]
+[node name="Level 9" type="Button" parent="LevelContainer/HBoxContainer2"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../Level 8")
 focus_neighbor_top = NodePath("../../HBoxContainer/Level 4")
 text = "Level 9"
 
-[node name="Level 10" type="Button" parent="GridContainer/HBoxContainer2"]
+[node name="Level 10" type="Button" parent="LevelContainer/HBoxContainer2"]
 layout_mode = 2
 focus_neighbor_left = NodePath("../Level 9")
 focus_neighbor_top = NodePath("../../HBoxContainer/Level 5")
 focus_neighbor_right = NodePath("../../HBoxContainer/Level 1")
 text = "Level 10"
+
+[node name="BackContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+
+[node name="Back" type="Button" parent="BackContainer"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="BackContainer/Back" to="." method="_on_back_pressed"]
