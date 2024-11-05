@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://q828pww18le7"]
 
-[ext_resource type="Script" path="res://script/level_selector.gd" id="1_2bwt1"]
+[ext_resource type="Script" path="res://script/level_selector.gd" id="1_1gmlc"]
 
 [node name="LevelSelector" type="Control"]
 layout_mode = 3
@@ -9,7 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_2bwt1")
+script = ExtResource("1_1gmlc")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -109,4 +109,14 @@ grow_vertical = 0
 layout_mode = 2
 text = "Back"
 
+[connection signal="pressed" from="LevelContainer/HBoxContainer/Level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer/Level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer/Level 3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer/Level 4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer/Level 5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer2/Level 6" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer2/Level 7" to="." method="_on_level_7_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer2/Level 8" to="." method="_on_level_8_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer2/Level 9" to="." method="_on_level_9_pressed"]
+[connection signal="pressed" from="LevelContainer/HBoxContainer2/Level 10" to="." method="_on_level_10_pressed"]
 [connection signal="pressed" from="BackContainer/Back" to="." method="_on_back_pressed"]
