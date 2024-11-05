@@ -16,4 +16,4 @@ func _on_back_pressed() -> void:
 
 
 func _on_level_1_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scene/game.tscn")
