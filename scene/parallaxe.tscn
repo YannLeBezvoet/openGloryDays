@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ttcpi7hfmm81"]
+
+[ext_resource type="Script" path="res://script/parallaxe.gd" id="1_bjri3"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jeatp"]
+size = Vector2(1152, 648)
+
+[node name="Parallaxe" type="Node2D"]
+script = ExtResource("1_bjri3")
+
+[node name="parallax background" type="Parallax2D" parent="."]
+
+[node name="background" type="Sprite2D" parent="parallax background"]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(-33.4999, 325)
+scale = Vector2(3.48524, 1)
+texture = SubResource("PlaceholderTexture2D_jeatp")
+
+[node name="parallax ground" type="Parallax2D" parent="."]
+scroll_offset = Vector2(405, 448)
+
+[node name="ColorRect" type="ColorRect" parent="parallax ground"]
+offset_left = -2446.0
+offset_right = 1569.0
+offset_bottom = 201.0
+color = Color(1, 1, 0.529412, 1)
