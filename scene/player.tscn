@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ds1kx77b8bjif"]
+
+[node name="player" type="Area2D"]
+position = Vector2(134, 118)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
