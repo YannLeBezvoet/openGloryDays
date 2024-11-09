@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjo16qjhh6pin"]
+[gd_scene load_steps=4 format=3 uid="uid://bjo16qjhh6pin"]
 
 [ext_resource type="PackedScene" uid="uid://ttcpi7hfmm81" path="res://scene/parallaxe.tscn" id="1_qcsdc"]
+[ext_resource type="PackedScene" uid="uid://bb1pgff4h23bs" path="res://scene/bulding.tscn" id="2_6qnv1"]
+[ext_resource type="PackedScene" uid="uid://ds1kx77b8bjif" path="res://scene/player.tscn" id="3_hdv1y"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Parallaxe" parent="." instance=ExtResource("1_qcsdc")]
+
+[node name="Bulding" parent="." instance=ExtResource("2_6qnv1")]
+
+[node name="player" parent="." instance=ExtResource("3_hdv1y")]
