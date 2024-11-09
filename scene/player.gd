@@ -2,6 +2,7 @@ extends Area2D
 @export var speed = 400
 enum enum_direction {left, right}
 var direction
+const floor_height = 590
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	direction = enum_direction.left
@@ -11,9 +12,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("up"):
-		velocity.y -= 1
+		if position.y > 0:
+			velocity.y -= 1
 	if Input.is_action_pressed("down"):
-		velocity.y += 1
+		if position.y < floor_height:
+			velocity.y += 1
 	if direction == enum_direction.left:
 		velocity.x -= 1
 	if direction == enum_direction.right:
