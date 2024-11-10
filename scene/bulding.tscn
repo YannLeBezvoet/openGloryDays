@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bb1pgff4h23bs"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tqdwp"]
+
+[node name="Bulding" type="Node2D"]
+modulate = Color(0.374761, 0.0503694, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1015, 519)
+scale = Vector2(70.75, 86.5)
+texture = SubResource("PlaceholderTexture2D_tqdwp")
